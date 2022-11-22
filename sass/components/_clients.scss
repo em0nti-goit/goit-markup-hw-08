@@ -1,0 +1,43 @@
+/*----------  Clients section  ----------*/
+.clients {
+  @include section (94px);
+}
+
+.clients__title {
+  @extend %section-title;
+}
+
+.clients__list {
+  @extend %list;
+}
+.clients__item {
+  --items: 6;
+}
+
+.clients__link {
+  @extend %link;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 92px;
+
+  border: 1px solid var(--color-site-gray-2);
+  border-radius: 4px;
+
+  color: var(--color-site-gray-2);
+
+  transition: color var(--transition-duration) var(--transition-timing-function),
+    border-color var(--transition-duration) var(--transition-timing-function);
+
+  &:hover,
+  &:focus {
+    border-color: var(--color-brand-1);
+
+    color: var(--color-brand-1);
+  }
+}
+
+.clients__icon {
+  fill: currentColor;
+}

@@ -1,0 +1,44 @@
+
+/*=============================================
+=            Main-navigation            =
+=============================================*/
+
+.main-navigation {
+  display: flex;
+  align-items: center;
+}
+
+.main-navigation__logo {
+  margin-right: 93px;
+}
+
+.main-navigation__list {
+@extend %navigation-list;
+}
+
+.main-navigation__link {
+  @extend %navigation-link;
+
+  display: inline-block;
+}
+
+.main-navigation__link--current {
+  position: relative;
+
+  color: var(--color-brand-1);
+
+  &::after {
+    content: '';
+
+    display: block;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+
+    height: 4px;
+    width: 100%;
+
+    border-radius: 2px;
+    background-color: var(--color-brand-1);
+  }
+}

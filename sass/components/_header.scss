@@ -1,0 +1,14 @@
+/*=============================================
+=            Header            =
+=============================================*/
+
+.header {
+  border-bottom: 1px solid var(--color-site-gray-1);
+}
+
+.header__container {
+  display: flex;
+  justify-content: space-between;
+}
+
+/*=====  End of Header  ======*/

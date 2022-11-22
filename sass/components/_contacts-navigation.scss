@@ -1,0 +1,18 @@
+.contacts-navigation__list {
+  @extend %navigation-list;
+}
+
+.contacts-navigation__link {
+  @extend %navigation-link;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+
+  color: var(--color-font-2);
+}
+
+.contacts-navigation__icon {
+    fill: currentColor;
+  }

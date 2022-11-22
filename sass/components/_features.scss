@@ -1,0 +1,39 @@
+/*----------  Features section  ----------*/
+.features {
+  @include section (94px);
+}
+.features__list {
+  @extend %list;
+}
+
+.features__item {
+  --items: 4;
+}
+
+.features__icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  height: 120px;
+  margin-bottom: 30px;
+
+  border-radius: 4px;
+
+  background-color: var(--color-site-2);
+}
+
+.features__heading {
+  font-weight: 700;
+  font-size: 14px;
+  text-transform: uppercase;
+
+  margin-bottom: 10px;
+}
+
+.features__text {
+  font-size: 14px;
+  line-height: 1.71;
+
+  color: var(--color-font-2);
+}
