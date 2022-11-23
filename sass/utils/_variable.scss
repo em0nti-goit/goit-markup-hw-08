@@ -1,12 +1,7 @@
 :root {
   // Layouts
-  --section-padding-default: 94px;
-  //Breakpoints
-  --container-width-sm: 480px;
-  --container-width-md: 768px;
-  --container-width-lg: 1200px;
-
-
+  --section-padding-default: 60px;
+  --section-padding-lg: 94px;
   --container-padding-h: 15px;
   /* card-set */
   --items: 1;
@@ -45,3 +40,8 @@
     --transition-duration: 250ms;
     --transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   }
+
+  //Media Breakpoints
+  $container-width-sm: 480px;
+  $container-width-md: 768px;
+  $container-width-lg: 1200px;

@@ -59,35 +59,35 @@
 
 // media query mixin
 @mixin mq($type) {
-  $sm: var(--container-width-sm);
-  $md: var(--container-width-mq);
-  $lg: var(--container-width-lg);
+  $sm: $container-width-sm;
+  $md: $container-width-md;
+  $lg: $container-width-lg;
 
-  @if ($type == sm) {
+  @if $type == sm {
     @media screen and (min-width: $sm) {
       @content;
     }
-  } @else if ($type == sm-only) {
+  } @else if $type == sm-only {
     @media screen and (max-width: #{$md - 0.02}) {
       @content;
     }
-  } @else if ($type == md) {
+  } @else if $type == md {
     @media screen and (min-width: $md) {
       @content;
     }
-  } @else if ($type == md-only) {
+  } @else if $type == md-only {
     @media screen and (min-width: $md) and (max-width: #{$lg - 0.02}) {
       @content;
     }
-  } @else if ($type == lg) {
+  } @else if $type == lg {
     @media screen and (min-width: $lg) {
       @content;
     }
-  } @else if ($type == not-lg) {
+  } @else if $type == not-lg {
     @media screen and (max-width: #{$lg - 0.02}) {
       @content;
     }
-  } @else if ($type == retina) {
+  } @else if $type == retina {
     @media (min-device-pixel-ratio: 2),
       (-webkit-min-device-pixel-ratio: 2),
       (min-resolution: 192dpi),

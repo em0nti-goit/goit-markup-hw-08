@@ -146,10 +146,8 @@ img {
 }
 
 :root {
-  --section-padding-default: 94px;
-  --container-width-sm: 480px;
-  --container-width-md: 768px;
-  --container-width-lg: 1200px;
+  --section-padding-default: 60px;
+  --section-padding-lg: 94px;
   --container-padding-h: 15px;
   /* card-set */
   --items: 1;
@@ -297,11 +295,25 @@ img {
 }
 
 .container {
-  max-width: var(--container-width);
-  width: 100%;
+  min-width: 320px;
   padding-left: var(--container-padding-h);
   padding-right: var(--container-padding-h);
   margin: 0 auto;
+}
+@media screen and (min-width: 480px) {
+  .container {
+    width: 480px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .container {
+    width: 768px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .container {
+    width: 1200px;
+  }
 }
 
 /*----------  Logo  ----------*/
@@ -646,9 +658,26 @@ img {
   padding-bottom: var(--section-padding-default);
   background-color: inherit;
 }
+@media screen and (min-width: 1200px) {
+  .features {
+    padding-top: var(--section-padding-lg);
+    padding-bottom: var(--section-padding-lg);
+    background-color: inherit;
+  }
+}
 
 .features__item {
-  --items: 4;
+  --items: 1;
+}
+@media screen and (min-width: 768px) {
+  .features__item {
+    --items:2;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .features__item {
+    --items:4;
+  }
 }
 
 .features__icon {
@@ -672,6 +701,11 @@ img {
   font-size: 14px;
   text-transform: uppercase;
   margin-bottom: 10px;
+}
+@media screen and (max-width: 767.98px) {
+  .features__heading {
+    text-align: center;
+  }
 }
 
 .features__text {

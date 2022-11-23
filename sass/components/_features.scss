@@ -1,13 +1,25 @@
 /*----------  Features section  ----------*/
 .features {
-  @include section ();
+  @include section();
+
+  @include mq(lg) {
+    @include section(var(--section-padding-lg));
+  }
 }
 .features__list {
   @extend %list;
 }
 
 .features__item {
-  --items: 4;
+  --items: 1;
+
+  @include mq(md) {
+    --items:2;
+  }
+
+  @include mq(lg) {
+    --items:4;
+  }
 }
 
 .features__icon {
@@ -29,6 +41,10 @@
   text-transform: uppercase;
 
   margin-bottom: 10px;
+
+  @include mq(sm-only) {
+    text-align: center;
+  }
 }
 
 .features__text {
