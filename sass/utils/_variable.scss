@@ -1,4 +1,19 @@
 :root {
+  // Layouts
+  --section-padding-default: 94px;
+  //Breakpoints
+  --container-width-sm: 480px;
+  --container-width-md: 768px;
+  --container-width-lg: 1200px;
+
+
+  --container-padding-h: 15px;
+  /* card-set */
+  --items: 1;
+  --indent: 30px;
+  --diametr-social-link: 44px;
+
+  // Colors
     --color-white: #fff;
     --color-white-opacity-1: rgba(255, 255, 255, 0.1);
     --color-black: #000;
@@ -24,17 +39,7 @@
     --color-site-gray-3: rgba(33, 33, 33, 0.2);
     --color-site-gray-4: rgba(117, 117, 117, 0.5);
     /*fill icons*/
-
     --color-btn-active: #188ce8;
-
-    --section-padding: 94px;
-    --container-width: 1200px;
-    --container-padding-h: 15px;
-
-    /* card-set */
-    --items: 1;
-    --indent: 30px;
-    --diametr-social-link: 44px;
 
     /* transition */
     --transition-duration: 250ms;
