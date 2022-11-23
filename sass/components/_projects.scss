@@ -1,6 +1,9 @@
 /*----------  Projects section  ----------*/
 .projects {
-  @include section (0, 94px);
+  @include mq(not-lg) {
+    display: none;
+  }
+  @include section(0, var(--section-padding-lg));
 }
 
 .projects__title {

@@ -717,8 +717,13 @@ img {
 /*----------  Projects section  ----------*/
 .projects {
   padding-top: 0;
-  padding-bottom: 94px;
+  padding-bottom: var(--section-padding-lg);
   background-color: inherit;
+}
+@media screen and (max-width: 1199.98px) {
+  .projects {
+    display: none;
+  }
 }
 
 .projects__item {
