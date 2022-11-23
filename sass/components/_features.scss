@@ -1,6 +1,6 @@
 /*----------  Features section  ----------*/
 .features {
-  @include section (94px);
+  @include section ();
 }
 .features__list {
   @extend %list;
