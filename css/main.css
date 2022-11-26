@@ -380,9 +380,9 @@ img {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   gap: 10px;
 }
 
@@ -752,34 +752,45 @@ img {
 
 /*----------  Team section  ----------*/
 .team {
-  padding-top: 94px;
-  padding-bottom: 94px;
+  padding-top: var(--section-padding-default);
+  padding-bottom: var(--section-padding-default);
   background-color: var(--color-site-2);
 }
 
 .team__item {
-  --items: 4;
+  --items: 1;
   background-color: var(--color-white);
   -webkit-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
           box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0 0 4px 4px;
 }
+@media screen and (min-width: 768px) {
+  .team__item {
+    --items: 2;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .team__item {
+    --items: 4;
+  }
+}
 
 .team__text {
-  padding: 30px 32px;
+  padding: 30px 32px 24px;
+  text-align: center;
 }
 
 .team__heading {
   margin-bottom: 10px;
   font-weight: 500;
   font-size: 16px;
-  text-align: center;
+  line-height: 1.19;
 }
 
 .team__desc {
   margin-bottom: 16px;
   font-size: 16px;
-  text-align: center;
+  line-height: 1.19;
   color: var(--color-font-2);
 }
 
