@@ -1,6 +1,10 @@
 /*----------  Clients section  ----------*/
 .clients {
-  @include section (94px);
+  @include section ();
+
+  @include mq (lg) {
+    @include section (var(--section-padding-lg));
+  }
 }
 
 .clients__title {
@@ -11,7 +15,15 @@
   @extend %list;
 }
 .clients__item {
-  --items: 6;
+  --items: 2;
+
+  @include mq(md) {
+    --items: 3;
+  }
+
+  @include mq(lg) {
+    --items: 6;
+  }
 }
 
 .clients__link {

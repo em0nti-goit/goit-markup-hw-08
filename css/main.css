@@ -796,13 +796,30 @@ img {
 
 /*----------  Clients section  ----------*/
 .clients {
-  padding-top: 94px;
-  padding-bottom: 94px;
+  padding-top: var(--section-padding-default);
+  padding-bottom: var(--section-padding-default);
   background-color: inherit;
+}
+@media screen and (min-width: 1200px) {
+  .clients {
+    padding-top: var(--section-padding-lg);
+    padding-bottom: var(--section-padding-lg);
+    background-color: inherit;
+  }
 }
 
 .clients__item {
-  --items: 6;
+  --items: 2;
+}
+@media screen and (min-width: 768px) {
+  .clients__item {
+    --items: 3;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .clients__item {
+    --items: 6;
+  }
 }
 
 .clients__link {
