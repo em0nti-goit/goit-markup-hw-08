@@ -4,6 +4,11 @@
 
 .header {
   border-bottom: 1px solid var(--color-site-gray-1);
+
+  @include mq(sm-only) {
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
 }
 
 .header__container {

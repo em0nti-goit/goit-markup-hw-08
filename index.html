@@ -10,7 +10,7 @@
   </head>
 
   <body class="page">
-    <!-- <header class="header">
+    <header class="header">
       <div class="container header__container">
         <nav class="main-navigation">
           <a class="logo main-navigation__logo" href="./index.html" lang="en"
@@ -57,17 +57,28 @@
             </li>
           </ul>
         </div>
+        <button
+          class="toggle-button js-open-menu"
+          aria-expanded="false"
+          aria-controls="mobile-menu">
+          <svg class="toggle-button__icon" width="24" height="16">
+            <use href="./images/icons.svg#menu-toggle"></use>
+          </svg>
+        </button>
       </div>
-    </header> -->
+    </header>
     <main>
       <!-- Hero block -->
       <section class="hero">
-          <div class="container hero__container">
-            <h1 class="hero__title">Ефективні рішення для вашого бізнесу</h1>
-            <button class="main-button hero__button" type="button" data-modal-open>
-              <span class="main-button__text">Замовити послугу</span>
-            </button>
-          </div>
+        <div class="container hero__container">
+          <h1 class="hero__title">Ефективні рішення для вашого бізнесу</h1>
+          <button
+            class="main-button hero__button"
+            type="button"
+            data-modal-open>
+            <span class="main-button__text">Замовити послугу</span>
+          </button>
+        </div>
       </section>
 
       <!-- Features -->
@@ -572,8 +583,64 @@
       </div>
     </footer>
 
+    <!-- ----------  Toggle menu  ---------- -->
+    <div class="toggle-menu js-menu-container" id="mobile-menu">
+      <button class="toggle-button toggle-menu__close-button js-close-menu">
+        <svg class="toggle-button__icon" width="19" height="19">
+          <use href="./images/icons.svg#close-toggle"></use>
+        </svg>
+      </button>
+      <ul class="toggle-menu__main-navigation">
+        <li class="toggle-menu__main-navigation-item">
+          <a
+            href="#"
+            class="toggle-menu__main-navigation-link toggle-menu__main-navigation-link--current"
+            >Студія</a
+          >
+        </li>
+        <li class="toggle-menu__main-navigation-item">
+          <a href="./portfolio.html" class="toggle-menu__main-navigation-link"
+            >Портфоліо</a
+          >
+        </li>
+        <li class="toggle-menu__main-navigation-item">
+          <a href="" class="toggle-menu__main-navigation-link">Контакти</a>
+        </li>
+      </ul>
+      <ul class="toggle-menu__contacts-navigation-list">
+        <li class="toggle-menu__contacts-navigation-item">
+          <a
+            class="toggle-menu__contacts-navigation-phone"
+            href="tel:+380961111111">
+            +38 096 111 11 11
+          </a>
+        </li>
+        <li class="toggle-menu__contacts-navigation-item">
+          <a
+            class="toggle-menu__contacts-navigation-email"
+            href="mailto:info@devstudio.com">
+            info@devstudio.com
+          </a>
+        </li>
+      </ul>
+      <ul class="toggle-menu__social-list">
+        <li class="toggle-menu__social-item">
+          <a href="" class="toggle-menu__social-link">Instagram</a>
+        </li>
+        <li class="toggle-menu__social-item">
+          <a href="" class="toggle-menu__social-link">Twitter</a>
+        </li>
+        <li class="toggle-menu__social-item">
+          <a href="" class="toggle-menu__social-link">Facebook</a>
+        </li>
+        <li class="toggle-menu__social-item">
+          <a href="" class="toggle-menu__social-link">LinkedIn</a>
+        </li>
+      </ul>
+    </div>
+
     <!-- ----------  Modal  ---------- -->
-    <!-- <div class="backdrop backdrop--hidden" data-modal>
+    <div class="backdrop backdrop--hidden" data-modal>
       <div class="modal backdrop__modal">
         <button class="modal__cloze-button" type="button" data-modal-close>
           <svg class="modal__cloze-icon" width="11" height="11">
@@ -595,22 +662,14 @@
           </div>
           <label class="form__label" for="phone">Телефон</label>
           <div class="form__input-wrap">
-            <input
-              class="form__input"
-              type="tel"
-              name="phone"
-              id="phone" />
+            <input class="form__input" type="tel" name="phone" id="phone" />
             <svg class="form__icon" width="18" height="18">
               <use href="./images/icons.svg#phone"></use>
             </svg>
           </div>
           <label class="form__label" for="mail">Пошта</label>
           <div class="form__input-wrap">
-            <input
-              class="form__input"
-              type="email"
-              name="mail"
-              id="mail" />
+            <input class="form__input" type="email" name="mail" id="mail" />
             <svg class="form__icon" width="18" height="18">
               <use href="./images/icons.svg#email"></use>
             </svg>
@@ -631,7 +690,9 @@
             <svg class="form__checkbox-icon" width="18" height="17">
               <use href="./images/icons.svg#check"></use>
             </svg>
-            <span class="form__checkbox-text">Погоджуюся з розсилкою та приймаю</span>
+            <span class="form__checkbox-text"
+              >Погоджуюся з розсилкою та приймаю</span
+            >
             <a href="#" class="form__checkbox-link">Умови договору</a>
           </label>
           <button class="main-button form__submit" type="submit">
@@ -639,8 +700,14 @@
           </button>
         </form>
       </div>
-    </div> -->
+    </div>
 
+    <script
+      defer
+      src="https://cdnjs.cloudflare.com/ajax/libs/body-scroll-lock/3.1.5/bodyScrollLock.min.js"
+      integrity="sha512-HowizSDbQl7UPEAsPnvJHlQsnBmU2YMrv7KkTBulTLEGz9chfBoWYyZJL+MUO6p/yBuuMO/8jI7O29YRZ2uBlA=="
+      crossorigin="anonymous"></script>
+    <script defer src="js/mobile-menu.js"></script>
     <script src="./js/modal.js"></script>
   </body>
 </html>

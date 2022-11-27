@@ -13,6 +13,9 @@
 }
 
 .main-navigation__list {
+  @include mq(sm-only) {
+    display: none;
+  }
 @extend %navigation-list;
 }
 

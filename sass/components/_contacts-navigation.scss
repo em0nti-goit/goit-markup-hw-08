@@ -1,3 +1,9 @@
+.contacts-navigation {
+  @include mq(sm-only) {
+    display: none;
+  }
+}
+
 .contacts-navigation__list {
   @extend %navigation-list;
 }
