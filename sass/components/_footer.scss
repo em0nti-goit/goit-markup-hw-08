@@ -11,8 +11,24 @@
 
 .footer__container {
   display: flex;
-  align-items: baseline;
   justify-content: space-between;
+
+  text-align: center;
+
+  @include mq(sm-only) {
+    flex-direction: column;
+    gap: 60px;
+  }
+
+  @include mq(md-only) {
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+
+  @include mq(lg) {
+    align-items: baseline;
+    text-align: left;
+  }
 
 }
 
@@ -40,9 +56,13 @@
 
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
+  align-items: center;
   justify-content: space-between;
   gap: 9px;
+
+  @include mq(lg) {
+    align-items: flex-start;
+  }
 }
 
 .footer__link {
@@ -60,6 +80,14 @@
 
 .footer__link--color-trasparent {
   color: var(--color-font-4-t);
+}
+
+
+/*----------  Footer subscription  ----------*/
+.footer__subscription {
+  @include mq(md-only) {
+    margin-top: 60px;
+  }
 }
 
 /*=====  End of Footer  ======*/
