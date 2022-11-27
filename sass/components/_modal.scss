@@ -3,8 +3,7 @@
 =============================================*/
 
 .modal {
-  width: 528px;
-  min-height: 581px;
+  width: 100%;
   padding: 40px;
 
   background-color: var(--color-white);
@@ -19,6 +18,15 @@
   transition: transform var(--transition-duration)
       var(--transition-timing-function),
     opacity var(--transition-duration) var(--transition-timing-function);
+
+  @include mq(not-lg) {
+    max-width: 450px;
+  }
+
+  @include mq(lg) {
+    width: 528px;
+    min-height: 581px;
+  }
 }
 
 .backdrop--hidden .modal {
@@ -65,10 +73,12 @@
 
   font-weight: 700;
   font-size: 20px;
-  line-height: 1.15;
+  line-height: 1.5;
   text-align: center;
+
+  @include mq(lg) {
+    line-height: 1.15;
+  }
 }
-
-
 
 /*=====  End of Modal  ======*/

@@ -444,6 +444,10 @@ img {
           justify-content: space-between;
 }
 
+.header__logo {
+  margin-right: 93px;
+}
+
 /*=====  End of Header  ======*/
 /*=============================================
 =            Main-navigation            =
@@ -455,10 +459,6 @@ img {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-}
-
-.main-navigation__logo {
-  margin-right: 93px;
 }
 
 .main-navigation__link {
@@ -972,8 +972,7 @@ img {
 =            Modal            =
 =============================================*/
 .modal {
-  width: 528px;
-  min-height: 581px;
+  width: 100%;
   padding: 40px;
   background-color: var(--color-white);
   -webkit-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
@@ -986,6 +985,17 @@ img {
   transition: opacity var(--transition-duration) var(--transition-timing-function), -webkit-transform var(--transition-duration) var(--transition-timing-function);
   transition: transform var(--transition-duration) var(--transition-timing-function), opacity var(--transition-duration) var(--transition-timing-function);
   transition: transform var(--transition-duration) var(--transition-timing-function), opacity var(--transition-duration) var(--transition-timing-function), -webkit-transform var(--transition-duration) var(--transition-timing-function);
+}
+@media screen and (max-width: 1199.98px) {
+  .modal {
+    max-width: 450px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .modal {
+    width: 528px;
+    min-height: 581px;
+  }
 }
 
 .backdrop--hidden .modal {
@@ -1032,8 +1042,13 @@ img {
   margin-bottom: 12px;
   font-weight: 700;
   font-size: 20px;
-  line-height: 1.15;
+  line-height: 1.5;
   text-align: center;
+}
+@media screen and (min-width: 1200px) {
+  .modal__heading {
+    line-height: 1.15;
+  }
 }
 
 /*=====  End of Modal  ======*/
@@ -1141,9 +1156,15 @@ img {
       -ms-flex-pack: center;
           justify-content: center;
   margin-bottom: 30px;
-  font-size: 14px;
-  line-height: 1.71;
+  font-size: 12px;
+  line-height: 1.17;
   color: var(--color-font-2);
+}
+@media screen and (min-width: 1200px) {
+  .form__checkbox-label {
+    font-size: 14px;
+    line-height: 1.71;
+  }
 }
 
 .form__checkbox {
