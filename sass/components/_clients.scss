@@ -8,7 +8,7 @@
 }
 
 .clients__title {
-  @extend %section-title;
+  @include section-title();
 }
 
 .clients__list {

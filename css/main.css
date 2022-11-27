@@ -201,14 +201,6 @@ img {
   cursor: pointer;
 }
 
-.clients__title, .team__title, .projects__title {
-  font-weight: 700;
-  font-size: 36px;
-  line-height: 1.17;
-  text-align: center;
-  margin-bottom: 50px;
-}
-
 .visually-hidden:not(:focus):not(:active) {
   position: absolute;
   width: 1px;
@@ -1029,6 +1021,20 @@ img {
   }
 }
 
+.projects__title {
+  margin-bottom: 30px;
+  font-weight: 700;
+  font-size: 28px;
+  line-height: 1.17;
+  text-align: center;
+}
+@media screen and (min-width: 1200px) {
+  .projects__title {
+    margin-bottom: 50px;
+    font-size: 36px;
+  }
+}
+
 .projects__item {
   --items: 3;
   position: relative;
@@ -1058,6 +1064,20 @@ img {
   padding-top: var(--section-padding-default);
   padding-bottom: var(--section-padding-default);
   background-color: var(--color-site-2);
+}
+
+.team__title {
+  margin-bottom: 30px;
+  font-weight: 700;
+  font-size: 28px;
+  line-height: 1.17;
+  text-align: center;
+}
+@media screen and (min-width: 1200px) {
+  .team__title {
+    margin-bottom: 50px;
+    font-size: 36px;
+  }
 }
 
 .team__item {
@@ -1108,6 +1128,20 @@ img {
     padding-top: var(--section-padding-lg);
     padding-bottom: var(--section-padding-lg);
     background-color: inherit;
+  }
+}
+
+.clients__title {
+  margin-bottom: 30px;
+  font-weight: 700;
+  font-size: 28px;
+  line-height: 1.17;
+  text-align: center;
+}
+@media screen and (min-width: 1200px) {
+  .clients__title {
+    margin-bottom: 50px;
+    font-size: 36px;
   }
 }
 

@@ -4,7 +4,7 @@
 }
 
 .team__title {
-  @extend %section-title;
+  @include section-title();
 }
 
 .team__list {

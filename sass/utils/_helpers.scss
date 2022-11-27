@@ -16,22 +16,6 @@
   cursor: pointer;
 }
 
-// Міксін для секції
-@mixin section ($padding-top: var(--section-padding-default), $padding-bottom: $padding-top, $background:inherit) {
-  padding-top: $padding-top;
-  padding-bottom: $padding-bottom;
-  background-color: $background;
-}
-
-%section-title {
-  font-weight: 700;
-  font-size: 36px;
-  line-height: 1.17;
-  text-align: center;
-
-  margin-bottom: 50px;
-}
-
 // media query mixin
 @mixin mq($type) {
   $sm: $container-width-sm;
@@ -73,3 +57,25 @@
     @error "Unknow type breakpoint #{$type}.";
   }
 }
+// Міксін для секції
+@mixin section($padding-top: var(--section-padding-default), $padding-bottom: $padding-top, $background:inherit) {
+  padding-top: $padding-top;
+  padding-bottom: $padding-bottom;
+  background-color: $background;
+}
+
+@mixin section-title() {
+  margin-bottom: 30px;
+
+  font-weight: 700;
+  font-size: 28px;
+  line-height: 1.17;
+  text-align: center;
+
+  @include mq(lg) {
+    margin-bottom: 50px;
+
+    font-size: 36px;
+  }
+}
+
