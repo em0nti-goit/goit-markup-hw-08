@@ -563,6 +563,20 @@ img {
   fill: currentColor;
 }
 
+@media screen and (min-width: 1200px) {
+  .contacts-navigation__icon--envelope {
+    width: 16px;
+    height: 12px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .contacts-navigation__icon--phone {
+    width: 12px;
+    height: 16px;
+  }
+}
+
 .toggle-button {
   min-height: 40px;
   min-width: 40px;

@@ -52,3 +52,16 @@
 .contacts-navigation__icon {
   fill: currentColor;
 }
+
+.contacts-navigation__icon--envelope {
+  @include mq(lg) {
+    width: 16px;
+    height: 12px;
+  }
+}
+.contacts-navigation__icon--phone {
+  @include mq(lg) {
+    width: 12px;
+    height: 16px;
+  }
+}
