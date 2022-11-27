@@ -6,23 +6,37 @@
 .main-navigation {
   display: flex;
   align-items: center;
-}
 
-.main-navigation__logo {
-  margin-right: 93px;
-}
-
-.main-navigation__list {
   @include mq(sm-only) {
     display: none;
   }
-@extend %navigation-list;
+}
+
+.main-navigation__list {
+  @extend %list;
+
+  display: flex;
+  gap: 50px;
+  align-items: center;
 }
 
 .main-navigation__link {
-  @extend %navigation-link;
+  @extend %link;
 
   display: inline-block;
+  padding: 32px 0;
+
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.02em;
+
+  transition: color var(--transition-duration) var(--transition-timing-function);
+
+  &:focus,
+  &:hover {
+    color: var(--color-brand-1);
+  }
 }
 
 .main-navigation__link--current {

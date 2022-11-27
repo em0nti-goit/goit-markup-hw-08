@@ -13,7 +13,22 @@
 
 .header__container {
   display: flex;
-  justify-content: space-between;
+  align-items: center;
 }
 
+.header__logo {
+  margin-right: auto;
+
+  @include mq(md) {
+    margin-right: 87px;
+  }
+
+  @include mq(lg) {
+    margin-right: 93px;
+  }
+}
+
+.header__main-navigation {
+  margin-right: auto;
+}
 /*=====  End of Header  ======*/
